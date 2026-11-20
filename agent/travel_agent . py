@@ -1,0 +1,10 @@
+from tools.flight_tool import search_flights
+from tools.hotel_tool import search_hotels
+from tools.places_tool import search_places
+
+def plan_trip(city, source):
+    return {
+        "flights": search_flights(source, city),
+        "hotels": search_hotels(city),
+        "places": search_places(city)
+    }
